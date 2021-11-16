@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'Rubik';
+    src: url('../fonts/Rubik-Regular.woff2') format('woff2'),
+        url('../fonts/Rubik-Regular.woff') format('woff'),
+        url('../fonts/Rubik-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('../fonts/Rubik-Medium.woff2') format('woff2'),
+        url('../fonts/Rubik-Medium.woff') format('woff'),
+        url('../fonts/Rubik-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    margin-top: 80px;
+    padding: 0;
+    font-family: 'Rubik';
+    background-color: #E5E5E5;;
+}
+
+.img {
+    display: inline-block;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0)
+  }
+
+
+/* MAIN */
+.container {
+    width: 477px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.site-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 45px 50px;
+    background-color: #fff;
+}
+
+.site-container:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.site-container__heading {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    margin-bottom: 36px;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 31px;
+    text-align: center;
+}
+
+.form__label {
+    display: flex;
+    align-items: center;
+    font-size: 26px;
+    line-height: 31px;
+}
+
+.form__label + .form__label {
+    margin-top: 18px;
+}
+
+.form__controller {
+    margin-right: 16px;
+    width: 35px;
+    height: 35px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+input:checked + .form__conttennis {
+    background-image: url(../img/table-tennis.png);
+    background-repeat: no-repeat;
+    background-position-x: 7px;
+    background-position-y: 7px;
+}
+
+input:checked + .form__contbasket {
+    background-image: url(../img/basketball-ball.png);
+    background-repeat: no-repeat;
+    background-position-x: 6px;
+    background-position-y: 6px;
+}
+
+input:checked + .form__contvoley {
+    background-image: url(../img/volleyball-ball.png);
+    background-repeat: no-repeat;
+    background-position-x: 6px;
+    background-position-y: 6px;
+}
+
+input:disabled + .form__controller {
+    background-image: url(../img/hockey-puck.png);
+    background-repeat: no-repeat;
+    background-position-x: 6px;
+    background-position-y: 6px;
+    color: #AAAAAA;
+    border: 1px solid #AAAAAA;
+    border-radius: 5px
+}
+
+input:focus + .form__controller {
+    box-shadow: 0px 0px 0px 3px #0E85F3;
+}
